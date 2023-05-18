@@ -1,0 +1,25 @@
+{
+  "bebidas": [
+    {
+      "nome": "Guarana Jesus",
+      "quantidade": 12,
+      "id": 1
+    },
+    {
+      "nome": "Sao Geraldo",
+      "quantidade": 12,
+      "id": 2
+    }
+  ],
+
+  "contatos": [
+    {
+        "id": 1,
+        "nome": "gabriela"
+    },
+    {
+        "id": 2,
+        "nome": "jonas"
+    }
+  ]
+}
