@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Orders from "./pages/Orders";
 import ProductDetails from "./pages/ProductDetails"
 import Products from "./pages/Products"
+import Slides from "./pages/Slides"
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
     <Route path="/meus-pedidos" element={<Orders/>} />
     <Route path="/produtos/:id" element={<ProductDetails/>} />
     <Route path="/produtos" element={<Products/>} />
+    <Route path="/slides" element={<Slides/>}/>
     </Routes>
     </BrowserRouter>
   )

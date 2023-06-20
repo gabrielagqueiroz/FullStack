@@ -2,6 +2,7 @@ import Navbar from '../../components/Navbar';
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 import FeaturedCollections from '../../components/FeaturedCollections';
+import FeaturedCarousel from '../../components/FeaturedCarousel';
 
 
 export default function Home() {
@@ -11,9 +12,7 @@ export default function Home() {
 
             <Menu/>
 
-            <div>
-                Carrosel
-            </div>
+            <FeaturedCarousel/>
 
             <FeaturedCollections/>
 
