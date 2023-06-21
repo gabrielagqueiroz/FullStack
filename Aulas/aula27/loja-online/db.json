@@ -1,4 +1,20 @@
-{"collections": [
+{
+    "campaigns": [
+        {
+            "id": 1,
+            "title": "Segunda do papoco zenir",
+            "text": "A maior explosão de ofertas",
+            "image": "https://equipe1fs13.github.io/img/tenisCarrosel.png"
+        },
+        {
+            "id": 2,
+            "title": "Queima de estoque",
+            "text": "Aproveite, só enquanto durarem os estoques",
+            "image": "https://equipe1fs13.github.io/img/tenisCarrosel.png"
+        }
+    ],
+
+    "collections": [
     {
         "id": 1,
         "title": "Camisetas",
@@ -17,8 +33,5 @@
         "discount": 100,
         "image": "https://equipe1fs13.github.io/img/Headsets.png"
     }
-
-
-    
 ]
 }
