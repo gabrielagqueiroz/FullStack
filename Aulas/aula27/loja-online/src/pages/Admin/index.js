@@ -1,5 +1,6 @@
 import React from 'react';
 import {Divider} from '@mui/material'
+import {Link} from 'react-router-dom';
 
 export default function Admin(){
     const [campaigns, setCampaigns] = React.useState([]);
@@ -27,6 +28,8 @@ export default function Admin(){
             <h1>Admin</h1>
             <Divider/>
 
+            <Link to="/admin/campanhas/nova">Nova Campanha</Link>
+
             <table width="100%">
                 <thead>
                     <tr>
@@ -46,7 +49,10 @@ export default function Admin(){
                             <td>{cada.text}</td>
                             <td> <img src={cada.image} width="100rem" alt="" /></td>
                             <td>
-                                <button>Editar</button>
+                                <Link to={"/admin/campanhas/"+cada.id+"/editar"}>
+                                    <button>Editar</button>
+                                </Link>
+                                
                                 <button onClick={() => remove(cada.id)}>Excluir</button>
                             </td>
                             </tr>

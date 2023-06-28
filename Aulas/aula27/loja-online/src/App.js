@@ -9,6 +9,8 @@ import ProductDetails from "./pages/ProductDetails";
 import Products from "./pages/Products";
 import Slides from "./pages/Slides";
 import Admin from "./pages/Admin";
+import AddCampanha from './pages/AddCampanha';
+import EditCampanha from './pages/EditCampanha';
 
 
 export default function App() {
@@ -22,6 +24,8 @@ export default function App() {
     <Route path="/produtos" element={<Products/>} />
     <Route path="/slides" element={<Slides/>}/>
     <Route path="/admin" element={<Admin/>}/>
+    <Route path="/admin/campanhas/nova" element={<AddCampanha/>}/>
+    <Route path="/admin/campanhas/:id/editar" element={<EditCampanha/>}/>
     </Routes>
     </BrowserRouter>
   )
