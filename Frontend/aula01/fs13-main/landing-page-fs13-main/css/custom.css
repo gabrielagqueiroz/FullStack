@@ -1,0 +1,25 @@
+.custom-carousel {
+    height: 400px;
+    align-items: center;
+}
+
+.custom-details {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-details i {
+    font-size: 4rem;
+    transition: 1s;
+}
+
+.custom-details:hover i {
+    color:rgb(0, 30, 255);
+    transform: rotate(-720deg) scale(1.2);
+    transition: 2s;
+}
