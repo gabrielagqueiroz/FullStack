@@ -1,0 +1,1 @@
+const {listarTodos, filtrar, destaques, detalhes} = require('./produto');
