@@ -1,17 +1,17 @@
 function listarTodos(){
-    return 'listar todos os produtos';
+    return 'listar todos categorias';
 }
 
 function filtrar(){
-    return 'filtrar produtos';
+    return 'filtrar categorias';
 }
 
 function destaques(){
-    return 'destaques produtos';
+    return 'destaques categorias';
 }
 
 function detalhes(){
-    return 'detalhes produtos';
+    return 'detalhes categorias';
 }
 
 
