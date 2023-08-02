@@ -83,3 +83,23 @@ VALUES
 
     
 
+
+
+
+
+
+-- 01/08 --
+
+USE db_escola;
+
+CREATE TABLE tb_curso (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    carga_horaria INT(4) NOT NULL
+);
+
+
+
+INSERT INTO tb_curso (nome, carga_horaria) VALUES ('Fullstack', 192);
+INSERT INTO tb_curso (nome, carga_horaria) VALUES ('Marketing', 100);
+INSERT INTO tb_curso (nome, carga_horaria) VALUES ('PHP', 72);
