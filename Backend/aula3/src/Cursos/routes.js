@@ -4,13 +4,13 @@ const database = require('../../conexao');
 const app = express.Router(); //SEMPRE QUE ISOLAR O FRONT TEM QUE USAR O ROUTER
 
 app.get('/cursos', async (req, res) => {
-    let dados = await database.execultar('SELECT * FROM tb_curso');
+    let dados = await database.executar('SELECT * FROM tb_curso');
 
     res.send(dados);
 })
 
 app.get('/cursos/:id', async (req, res) => {
-    let dados = await database.execultar(`SELECT * FROM tb_curso WHERE id=${req.params.id}`);
+    let dados = await database.executar(`SELECT * FROM tb_curso WHERE id=${req.params.id}`);
 
     if(dados.length === 0){
         res.status(404).end();
@@ -29,7 +29,7 @@ app.post('/cursos', async (req, res) => {
 
     let {nome, carga_horaria} = req.body;
 
-   let dados = await database.execultar(`INSERT INTO tb_curso (nome, carga_horaria) VALUES ('${nome}', '${carga_horaria}')`);
+   let dados = await database.executar(`INSERT INTO tb_curso (nome, carga_horaria) VALUES ('${nome}', '${carga_horaria}')`);
 
     req.body.id = dados.insertId;
 
@@ -40,7 +40,7 @@ app.post('/cursos', async (req, res) => {
 app.patch('/cursos/:id', async (req, res) => {
     let {nome, carga_horaria} = req.body;
 
-    await database.execultar(`UPDATE tb_curso SET nome='${nome}', carga_horaria='${carga_horaria}' WHERE id=${req.params.id}`);
+    await database.executar(`UPDATE tb_curso SET nome='${nome}', carga_horaria='${carga_horaria}' WHERE id=${req.params.id}`);
     
   
 
@@ -50,7 +50,7 @@ app.patch('/cursos/:id', async (req, res) => {
 })
 
 app.delete('/cursos/:id', async (req, res) => {
-   let dados = await database.execultar(`DELETE FROM tb_curso WHERE id=${req.params.id}`);
+   let dados = await database.executar(`DELETE FROM tb_curso WHERE id=${req.params.id}`);
 
    if(dados.affectedRows === 0){
         res.status(404).end()

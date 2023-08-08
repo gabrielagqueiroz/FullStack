@@ -8,6 +8,13 @@ CREATE TABLE tb_aluno (
     criado_em DATETIME DEFAULT CURRENT_TIMESTAMP 
 )
 
+
+CREATE TABLE tb_disciplina (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL, --obrigatorio--
+    carga_horaria INT NOT NULL
+);
+
 /* DEFAULT -> INICIA COM UM VALOR */ 
 
 

@@ -28,11 +28,13 @@ http.createServer(recepcao).listen(8000); */
 const express = require('express');
 const database = require('./conexao');
 const curso = require('./src/Cursos/routes.js')
+const disciplina = require('./src/Disciplina/routes.js')
 
 const app = express();
 app.use(express.json()); // API vai trabalhar com JSON
 
 app.use(curso);
+app.use(disciplina);
 
 app.get('/', (req, res) => {
     res.end('Ola mundo');
