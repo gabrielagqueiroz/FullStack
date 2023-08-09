@@ -26,12 +26,14 @@ const database = require('./conexao');
 http.createServer(recepcao).listen(8000); */
 
 const express = require('express');
+const cors = require('cors');
 const database = require('./conexao');
 const curso = require('./src/Cursos/routes.js')
 const disciplina = require('./src/Disciplina/routes.js')
 
 const app = express();
 app.use(express.json()); // API vai trabalhar com JSON
+app.use(cors());
 
 app.use(curso);
 app.use(disciplina);
