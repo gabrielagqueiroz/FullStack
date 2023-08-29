@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap');
+
+.menu a {
+    color: #474747;
+    margin-right: 5px;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+}
+
+.menu a:hover {
+    color: #c92071;
+    border-bottom: 1px solid #c92071;
+}
+
+.menu a.active {
+    font-weight: bold;
+    border-bottom: 3px solid #c92071;
+    color: #c92071;
+}

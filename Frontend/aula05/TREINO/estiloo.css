@@ -1,0 +1,72 @@
+body { /* tabela*/
+    width: 80%; /*largura em relação a pagina*/
+    margin: auto; /*alinhamento em relação a pagina*/
+}
+
+table{ /* dentro da tabela toda*/
+    width: 100%;
+}
+
+thead > tr {
+    background-color:  #5b7d4b ; /*cor da celula cabeçalho*/
+    color: rgb(255, 255, 255); /*cor nome cabeçalho*/
+    height: 30px; /*largura cabeçalho*/
+    text-transform: uppercase; /*?*/
+}
+
+table >th >td { /* a tabela toda*/
+   border-collapse: collapse; /*tira as bordas*/
+   border: 1px solid #080808; /*borda/linha*/
+}
+
+tbody > tr > td {
+    padding-left: 5px; /*alinhamento esquerda*/
+    padding-top: 3px; /*alinhamento topo/ centro*/
+    padding-bottom: 3px; /*alinhamento interno*/
+    text-align: center; /*alinhamento do texto ao centro*/
+
+}
+
+tbody /*> tr:nth-child(even)*/ { /*efeito cor sim cor não*/
+    background-color: #937a8a; /*cor da celula corpo*/
+    color: #ffffff; /* cor nome celulas corpo*/
+}
+
+tbody > tr:hover{ /*efeito cor sim cor não*/
+    background-color: #714483; /*cor da celula corpo*/
+    color: #ffffff; /* cor nome celulas corpo*/
+}
+
+tbody > tr:hover { /*efeito selecionar*/
+    cursor: pointer; /*formato mouse - mão */
+    font-weight: bold; /*fonte texto corpo*/
+}
+
+button{
+    border: 0; /*?*/
+    height: 20px; /*tamanho do botão*/
+    border-radius: 5px; /*arredondamento do botão*/
+    margin-left: 10px; /* margem esquerda entre os botões*/ 
+}
+
+tr > td >button:first-child { /*muda a cor dos botões da primeira coluna*/
+    background-color: #ffffff;
+}
+
+tr > td >button:first-child:hover { /*mudar a cor quando flega o botão*/
+    background-color: #7a9383;
+}
+
+tr > td > button:nth-child(2) { /*muda a cor e cor do nome do botão 2 coluna */
+    background-color: #ffffff;
+    color: #000000;
+}
+
+tr > td:last-child { /*????*/
+    text-align: center 
+  
+}
+ 
+table{
+    box-shadow: -1px 2px 17px 4px rgba(0,0,0,0.75);
+}
