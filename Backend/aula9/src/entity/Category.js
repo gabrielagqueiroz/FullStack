@@ -1,3 +1,5 @@
+// AQUI PREEENCHE O BANCO
+
 const {DataTypes} = require('sequelize');
 const orm = require('../connection/orm');
 
