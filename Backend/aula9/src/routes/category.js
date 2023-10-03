@@ -2,10 +2,12 @@
 
 const express = require('express');
 const Category = require('../entity/Category');
+const {validSecurity} = require('../security/security');
 
 const router = express.Router();
 
-router.get('/categorias', async (req, res) =>{
+
+router.get('/categorias', validSecurity, async (req, res) =>{
    let data = await Category.findAll(); //SELECT * FROM 
 
    res.send(data);
