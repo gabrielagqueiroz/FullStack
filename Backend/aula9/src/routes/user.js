@@ -1,5 +1,10 @@
 const express = require('express');
 const User = require('../entity/User');
+const jwt = require('jsonwebtoken');
+const { generateJwt } = require('../security/security');
+
+
+const secret =  "secret"
 
 const router = express.Router()
 
@@ -26,10 +31,10 @@ router.post('/user', validateEmail, async(req, res) => {
     res.status(200).send(user);
 });
 
-
-router.post('/user/login', async (req, res) =>{
-    let data = await Category.create(req.body);
-    res.send(data);
+router.post('/user/login', validateEmail, generateJwt, async (req, res) =>{
+    const body = req.token;
+    /* const token = jwt.sign({teste: 1}, secret) */
+    res.send({token});
  });
 
 module.exports = router;

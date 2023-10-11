@@ -1,4 +1,7 @@
 const User = require('../entity/User')
+const jwt = require('jsonwebtoken');
+
+const secret = "secret"
 
 async function tokenIsValid(req) {
     /*  if(req.headers.token === 'fs13') {
@@ -48,6 +51,30 @@ async function tokenIsValid(req) {
          next();
      }
 
+
+     async function generateJwt(req, res, next) {
+       let user = await User.findOne({
+         where: {
+            email: req.body.email || null
+         }
+       })
+
+       if(!user.length){
+         errorToken(res)
+         return
+       }
+
+       const token = await jwt.sign({
+         user_id: user.id
+       }, secret)
+
+       req.token = token
+
+       next()
+     }
+
+
      module.exports = {
         validSecurity,
+        generateJwt
      };
