@@ -9,14 +9,14 @@ async function tokenIsValid(req) {
         }
         return false; */
   
-      /*   return req.headers.token === 'fs13'; */
+      /*return req.headers.token === 'fs13'; */
   
-   /*      let tokens = [
+    /*    let tokens = [
            'jordana',
            'nielly',
         ] */
 
-           /*      return tokens.includes(req.headers.token); */
+           /*return tokens.includes(req.headers.token); */
   
         let user = await User.findAll({
          where: {
@@ -43,6 +43,11 @@ async function tokenIsValid(req) {
 
 
      async function validSecurity(req, res, next){
+      if(!req.headers.token) {  //validar se o http client passou o token
+         errorPermission(res);
+         return;
+      }
+
         if(! await tokenIsValid(req)) {
            errorToken(res);
             return;
